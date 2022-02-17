@@ -19,6 +19,7 @@ public class PostSaveRequestDto {
         this.author = author;
     }
 
+    //Json 형태의 requestDto를 entity 형식으로 바꾸기
     public Posts toEntity(){
         return Posts.builder()
                 .title(title)
