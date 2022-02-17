@@ -4,7 +4,6 @@ buildscript {
     }
     repositories {
         mavenCentral()
-        jcenter()
     }
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
@@ -22,21 +21,14 @@ sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
-    jcenter()
 }
 
 dependencies {
-    implementation('org.springframework.boot:spring-boot-starter-web')
-    implementation('org.projectlombok:lombok')
-    implementation('org.springfAramework.boot:spring-boot-starter-data-jpa')
-    implementation('org.springframework.boot:spring-boot-starter-mustache')
-    implementation('com.h2database:h2')
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.projectlombok:lombok'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'com.h2database:h2'
+    implementation 'org.springframework.boot:spring-boot-starter-mustache'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
-    implementation('org.springframework.boot:spring-boot-starter-oauth2-client')
-    implementation('org.springframework.session:spring-session-jdbc')
-
-    implementation("org.mariadb.jdbc:mariadb-java-client")
-
-    testImplementation('org.springframework.boot:spring-boot-starter-test')
-    testImplementation("org.springframework.security:spring-security-test")
 }
