@@ -6,7 +6,7 @@
     <div class="col-md-4">
         <form>
             <div class="form-group">
-                <label for=""id>글 번호</label>
+                <label for="id">글 번호</label>
                 <input type="text" class="form-control"
                        id="id" value="{{post.id}}" readonly>
             </div>
@@ -25,9 +25,16 @@
                 <textarea class="form-control" id="content">{{post.content}}</textarea>
             </div>
         </form>
-        <a href="/" role="button" class="brn btn-secondary">취소</a>
-        <button type="button" class="brn btn-primary"
-                id = "btn-update">수정완료</button>
+
+        <a href="/" role="button" class="btn btn-secondary">취소</a>
+        <button type="button" class="btn btn-primary" id="btn-update">수정 완료</button>
+        <button type="button" class="btn btn-danger" id="btn-delete">삭제</button>
+<!--        <a href="/" role="button" class="btn btn-secondary">취소</a>-->
+<!--        <button type="button" class="btn btn-primary"-->
+<!--                id = "btn-update">수정완료</button>-->
+
+<!--        <button type="button" class="btn btn-danger"-->
+<!--                id = "btn-delete">삭제</button>-->
     </div>
 </div>
 {{>layout/footer}}

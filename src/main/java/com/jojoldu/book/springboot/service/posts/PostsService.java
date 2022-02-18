@@ -36,6 +36,14 @@ public class PostsService {
     }
 
     @Transactional
+    public void delete(Long id){
+        Posts posts = postRepository.findById(id).orElseThrow(() -> new
+                IllegalArgumentException("해당게시글이없습니다. id= " + id));
+        postRepository.delete(posts);
+
+    }
+
+    @Transactional
     public PostsResponseDto findById(Long id){
         Posts entity = postRepository.findById(id)
                 .orElseThrow(()->new IllegalArgumentException("해당게시글이 없습니다. id = " + id));
