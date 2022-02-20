@@ -20,6 +20,7 @@
                 {{/userName}}
                 {{^userName}} <!-- userName이 없다면 즉 모델에 저장되어있지 않다면 login 버튼 노출되게 하기-->
                     <a href="/oauth2/authorization/google" class="btn btn-success active" role="button">Google Login</a>
+                    <a href="/oauth2/authorization/naver" class="btn btn-secondary active" role="button">Naver Login</a>
                 {{/userName}}
             </div>
         </div>
