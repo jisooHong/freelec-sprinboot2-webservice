@@ -23,7 +23,7 @@ deploy: # s3로 파일 업로드 혹은 CodeDeploy 로 배포 등 외부 서비�
   - provider: s3
     access_key_id: $AWS_ACCESS_KEY
     secret_access_key: $AWS_SECRET_KEY
-    bucket: freelec-sringboot-build123
+    bucket: freelec-springboot-build123
     region: ap-northeast-2
     skip_cleanup: true
     acl: private # zip 파일 접근을 private 으로
