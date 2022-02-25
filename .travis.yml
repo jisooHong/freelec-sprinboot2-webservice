@@ -11,8 +11,11 @@ cache:
     - '$HOME/.gradle'
 script: "./gradlew clean build"
 
+before_install:
+  - chmod +x gradlew
+
 # CI 실행 완료 시 메일로 아람
 notifications:
   email:
     recipients:
-      -  'jigu6605@hanmail.net'
+      -  'ghdwltn0204@naver.com'
