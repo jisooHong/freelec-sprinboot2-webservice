@@ -38,7 +38,10 @@ deploy: # s3로 파일 업로드 혹은 CodeDeploy 로 배포 등 외부 서비�
     key: freelec-springboot2-webservice.zip
 
     bundle_type: zip
-    application: freelec-springboot2-webservice-group
+    application: freelec-springboot2-webservice
+
+    deployment_group: freelec-springboot2-webservice-group
+
     region: ap-northeast-2
     wait-until-deployed: true
 
