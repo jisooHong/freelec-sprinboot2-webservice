@@ -30,6 +30,18 @@ deploy: # s3로 파일 업로드 혹은 CodeDeploy 로 배포 등 외부 서비�
     local_dir: deploy # before_deploy에서 생성한 디렉토리, 해당위치의 파읾들만 s3로 전송
     wait-until-deployed: true
 
+    - provider: codedeploy
+      access_key_id: $AWS_ACCESS_KEY
+      secret_access_key: $AWS_SECRET_KEY
+
+      bucket: freelec-springboot-build123
+      key: freelec-springboot2-webservice.zip
+
+      bundle_type: zip
+      application: freelec-springboot2-webservice-group
+      region: ap-northeast-2
+      wait-until-deployed: true
+
 # CI 실행 완료 시 메일로 아람
 notifications:
   email:
